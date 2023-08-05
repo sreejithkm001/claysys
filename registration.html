@@ -1,127 +1,194 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en" >
 <head>
-    <meta charset="UTF-8">
-    <title>Responsive Registaration Form</title>
-    <link rel="stylesheet" href="./registration.css">
-    <script type="text/javascript" lang="javascript" src="./responsiveRegistaration.js"></script>
+  <meta charset="UTF-8">
+  <title>Registration Form Validation using JavaScript|| Learning Robo</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+  <link rel="stylesheet" href="registration.css">
 </head>
-
 <body>
     <div>
         <a href="home.html">HOME</a>
     </div>
-    <h1>Student Registaration Form</h1>
-    <div class="container">
-        <div class="row">
-            <div class="col-10">
-                <label for="fname">First Name:</label>
-            </div>
-            <div class="col-90">
-                <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="lname">Last Name:</label>
-            </div>
-            <div class="col-90">
-                <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="email">Email:</label>
-            </div>
-            <div class="col-90">
-                <input type="email" id="email" name="email" placeholder="it should contain @,.">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="mobile">Mobile:</label>
-            </div>
-            <div class="col-90">
-                <input type="tel" id="mobile" name="mobile" placeholder="only 10 digits are allowed">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="gender" required>Gender:</label>
-            </div>
-            <div class="col-90">
-                <input type="radio" id="male" name="gender" value="male" />Male
-                <input type="radio" id="female" name="gender" value="female" />Female
-                <input type="radio" id="others" name="gender" value="others" />Others
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="dob">Date Of Birth:</label>
-            </div>
-            <div class="col-90">
-                <input type="Date" id="dob" name="dob">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="address">Address:</label>
-            </div>
-            <div class="col-90">
-                <textarea name="address" id="address" cols="30" rows="10"></textarea>
-            </div>
-        </div>
-     
-        <div class="row">
-            <div class="col-10">
-                <label for="qualification" required>State:</label>
-            </div>
-            <div class="col-10">
-                <select name="qualification" id="qualification">
-                    <option value=" ">Select State:</option>
-                    <option value="Andhra Pradesh">Andhra Pradesh</option>
-                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                    <option value="MCA">Assam</option>
-                    <option value="BCA">Bihar</option>
-                    <option value="BTech.">Chhattisgarh</option>
-                    <option value="MTech.">Goa</option>
-                    <option value="MCA">Gujarat</option>
-                    <option value="BCA">Haryana</option>
-                    <option value="BTech.">Himachal Pradesh</option>
-                    <option value="MTech.">Jammu</option>
-                    <option value="MCA">Jharkand</option>
-                    <option value="BCA">Karnataka</option>
-                    <option value="MTech.">Kerala</option>
-                    <option value="MTech.">Madhya Pradesh</option>
-                    <option value="MTech.">Maharashtra</option>
-                    <option value="MTech.">Manipur</option>
-                    <option value="MTech.">Meghalaya</option>
-                </select>
-            </div>
-        </div>
+<div class="wrapper">
+	<div class="header">
+		<h2>Registration Form</h2>
+	</div>
+	<form id="form" class="form">
+		<div class="form-control">
+			<input type="text" placeholder="Enter name" id="name" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<input type="email" placeholder="Enter email" id="email" />
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+        <div class="form-control">
+            <input type="tel" id="mobile" placeholder="Enter mobile number">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+        <div class="form-control">
+            <input type="Date" placeholder="Enter DOB from picker" id="dob">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+        <div class="form-control">
+            <input type="tel" placeholder="Enter age" id="age">
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
         
-        <div class="row">
-            <div class="col-10">
-                <label for="password">Password:</label>
-            </div>
-            <div class="col-90">
-                <input type="password" id="password" name="password" maxlength="8">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-10">
-                <label for="password">Confirm Password:</label>
-            </div>
-            <div class="col-90">
-                <input type="password" id="password" name="password" maxlength="8">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <input type="submit" value="Registered" onclick="SaveStudentDetails()">
-        </div>
-    </div>
+        <div class="form-control">
+            <textarea style="width:180px;"  id="address" placeholder="Enter Address "></textarea>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+        <div class="form-control">
+            <select name="qualification" id="qualification">
+                <option value=" ">Select Qualification:</option>
+                <option value="Graduation">Graduation</option>
+                <option value="BTech.">BTech.</option>
+                <option value="MTech.">MTech.</option>
+                <option value="MCA">MCA</option>
+                <option value="BCA">BCA</option>
+            </select>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<input type="password" placeholder="Password" id="password"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+		<div class="form-control">
+			<input type="password" placeholder="Confirm Password" id="confirmpswrd"/>
+			<i class="fas fa-check-circle"></i>
+			<i class="fas fa-times-circle"></i>
+			<small>Error message</small>
+		</div>
+		<button>Submit</button>
+	</form>
+</div>
+  <script>
+    const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const confirmpswrd = document.getElementById('confirmpswrd');
+    const mobile = document.getElementById('mobile');
+    const dob = document.getElementById('dob');
+    const age = document.getElementById('age');
+    form.addEventListener('submit', e =>
+     {
+        e.preventDefault();
+    
+        checkInputs();
+    });
+    
+    function checkInputs() {
+        // trim to remove the whitespaces
+        const nameValue = name.value.trim();
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+        const confirmValue = confirmpswrd.value.trim();
+        const mobileValue = mobile.value.trim();
+        const dobValue = dob.value.trim();
+        const ageValue = age.value.trim();
+    
+        if (nameValue === '') {
+            setErrorFor(name, 'Please enter your name');
+        } else {
+            setSuccessFor(name);
+        }
+    
+        if (emailValue === '') {
+            setErrorFor(email, 'Please enter your email');
+        } else if (!isEmail(emailValue)) {
+            setErrorFor(email, 'Email not valid');
+        } else {
+            setSuccessFor(email);
+        }
+        if (mobileValue === '') {
+            setErrorFor(mobile, 'Please enter your mobile number');
+        } else if (isMobile(mobileValue)) {
+            setErrorFor(mobile, 'Invalid');
+        } else {
+            setSuccessFor(mobile);
+        }
+        if (dobValue === '') {
+            setErrorFor(dob, 'Please enter your DOB');
+        } else if (!isEmail(dobValue)) {
+            setSuccessFor(dob, 'Invalid');
+        } else {
+            setSuccessFor(dob);
+        }
+        if (ageValue === '') {
+            setErrorFor(age, 'Please enter your age');
+        } else if (!isEmail(ageValue)) {
+            setSuccessFor(age, 'Invalid');
+        } else {
+            setSuccessFor(age);
+        }
+    
+    
+        if (passwordValue === '') {
+            setErrorFor(password, 'Please enter password');
+        } else if (!isPassword(passwordValue)) {
+            setErrorFor(password, 'atleast one number, one uppercase, lowercase letter, and atleast 8 character');
+        }else {
+            setSuccessFor(password);
+        }
+    
+        if (confirmValue === '') {
+            setErrorFor(confirmpswrd, 'Please re-enter password');
+        } else if (!isConfirm(confirmValue)) {
+            setErrorFor(confirmpswrd, 'Invalid password');
+        }else if (passwordValue !== confirmValue) {
+            setErrorFor(confirmpswrd, 'Passwords does not match');
+        } else {
+            setSuccessFor(confirmpswrd);
+        }
+    }
+    
+    function setErrorFor(input, message) {
+        const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = 'form-control error';
+        small.innerText = message;
+    }
+    
+    function setSuccessFor(input) {
+        const formControl = input.parentElement;
+        formControl.className = 'form-control success';
+    }
+    
+    function isEmail(email) {
+        return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
+    }
+    function isMobile(mobile){  
+        return /^(?=.*[a-z])/.test(mobile);
+    }
+    
+    function isPassword(password){  
+        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(password);
+    }
+    
+    function isConfirm(confirmpswrd){  
+        return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/.test(confirmpswrd);
+    }
+    
+    
+    </script>
 </body>
-
 </html>
