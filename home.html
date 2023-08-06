@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>My Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <style>
-        
-        /* Basic styling for the navbar */
-        ul.navbar {
-            
-            list-style-type:none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin: 0;
-            padding: 0;
-            background-color: #333;
-            overflow: hidden;
-        }
+  <title>My Website</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+  <style>
+    ul.navbar {
 
-        /* Styling for the navbar items */
-        /* ul.navbar li {
-            
-            float: left;
-        } */
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      background-color: #333;
+      overflow: hidden;
+    }
 
-        /* Styling for the navbar links */
-        ul.navbar li a {
-            display: flex;
-            color: white;
-            
-            padding: 10px 16px;
-            text-decoration: none;
-        }
+    ul.navbar li a {
+      display: flex;
+      color: white;
 
-        /* Styling for the links on hover */
-        ul.navbar li a:hover:not(.active) {
-            background-color: #f00a0a;
-        }
-    </style>
+      padding: 10px 16px;
+      text-decoration: none;
+    }
+
+
+    ul.navbar li a:hover:not(.active) {
+      background-color: #f00a0a;
+    }
+  </style>
 </head>
+
 <body>
-    <div> 
-        <img style="float:left;width: 105px;height: 45px;" src="images/claysys-logo.png" alt="error">
-        <ul class="navbar">
-        <li><a href="login.html">Login</a></li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        
+  <div>
+    <img style="float:left;width: 105px;height: 45px;" src="images/claysys-logo.png" alt="error">
+    <ul class="navbar">
+      <li><a href="login.html">Login</a></li>
+      <li><a href="registration.html">Registration</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+
     </ul>
-</div>
-<div>
+  </div>
+  <div>
     <h1 style="color: #f00a0a; text-align: center;padding-top: 50px;margin-bottom: 50px;">Image Slider</h1>
-</div>
-<div id="carouselExampleIndicators" class="carousel slide">
-    <div  class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -70,20 +73,57 @@
         <img src="images/pexels-vlad-alexandru-popa-1402787.jpg" class="d-block w-100" alt="...">
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
 
 
+  <footer class="text-center text-white" style="background-color: #efe9e9;">
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/ClaySys" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
 
-    <!-- Your content goes here -->
+        <!-- Twitter -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/claysys" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+        <!-- Google -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.claysys.com/" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+        <!-- Instagram -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.instagram.com/claysystech"
+          role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+
+        <!-- Linkedin -->
+        <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/company/claysys-technologies-pvt-ltd" role="button"
+          data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+      </section>
+
+    </div>
+
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:Sreejith K M
+    </div>
+
+  </footer>
+
 
 </body>
+
 </html>

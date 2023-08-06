@@ -6,7 +6,7 @@
     font-family: 'Montserrat', sans-serif;
   }
   body {
-    background: #c7c7cf;
+    background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
   }
   .footer_get_touch_outer {
     margin-top: 10px;
@@ -22,14 +22,17 @@
   }
   .get_form_inner {
     display: block;
-    padding: 50px 40px;
-    background: rgb(167, 146, 146);
+    width: 900px;
+    margin-left: 100px;
+
+    padding: 50px 50px;
+    background: rgb(37, 35, 35);
     box-shadow: -4px -2px 20px -7px #0d0d0e;
   }
   input[type="text"], input[type="text"], input[type="email"], input[type="tel"] {
     border: 2px solid #141414;
     border-radius: 2px;
-    color: #333;
+    color: #050505;
     height: 42px;
     padding: 0 0 0 20px;
     width: 100%;
@@ -42,18 +45,20 @@
   }
   .grid-full {
     margin: 20px 0;
+    color: black;
   }
   textarea {
     border: 2px solid #0e0e0e;
     border-radius: 2px;
-    color: #333;
+    color: #080808;
     padding: 12px 0 0 20px;
     width: 100%;
     outline: 0;
     margin-bottom: 20px;
   }
   .get_form_inner_text h3 {
-    color: #333;
+    text-align: center;
+    color: #e5dddd;
     font-size: 26px;
     font-weight: 600;
     margin-bottom: 40px;
@@ -68,7 +73,7 @@
     padding: 10px 20px;
     outline: 0;
     cursor: pointer;
-    color: #01060a;
+    background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
     transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
     -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);

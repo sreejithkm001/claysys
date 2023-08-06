@@ -1,23 +1,16 @@
 *{
-    /* margin:0;
-    padding: 0; */
+  
     font-family: "Open Sans",sans-serif;
     box-sizing: border-box;
 }
 
-/* body{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #ad0808;
+body{
+    
+    background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
 }
- */
+
 .about-section{
-    /* background: url(pic.jpg) no-repeat left;
-    background-size: 55%;
-    background-color: #fdfdfd;
-    overflow: hidden; */
+ 
     height: 100%;
     padding: 100px ;
 }
@@ -25,7 +18,8 @@
 .inner-container{
     width: 100%;
     /* float: right; */
-    background-color: #fdfdfd;
+    background-color: #262121;
+    color: aliceblue;
     padding: 100px;
 box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
@@ -38,13 +32,14 @@ box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2
 
 .text{
     font-size: 13px;
-    color: #545454;
+    color: #e8e5e5;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 40px;
+    font-size: 19px;
 }
 h1{
-  color: #F85370;
+  color: #ffffff;
 }
 
 .skills{
@@ -54,30 +49,6 @@ h1{
     font-size: 13px;
 }
 
-/* @media screen and (max-width:1200px){
-    .inner-container{
-        padding: 80px;
-    }
-} */
-
-/* @media screen and (max-width:1000px){
-    .about-section{
-        background-size: 100%;
-        padding: 100px 40px;
-    }
-    .inner-container{
-        width: 100%;
-    }
-}
-
-@media screen and (max-width:600px){
-    .about-section{
-        padding: 0;
-    }
-    .inner-container{
-        padding: 60px;
-    }
-} */
 span{
   cursor: pointer;
   font-size: 16px;
@@ -92,10 +63,3 @@ border-radius: 20px;
 transition: 0.5s;
 
 }
-/* .active{
-  background-image: linear-gradient(to right top, #f85370, #f35470, #ee5570, #e8556f, #e3566f);
-  color: #fff;
-  border-radius: 20px;
-
-
-} */
