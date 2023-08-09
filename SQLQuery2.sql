@@ -1,0 +1,1 @@
+INSERT INTO tutorial (userid,Name,DOB,age,gender,mobile,email,address,state,city,password) VALUES (1,'sreejith','30/10/1999',25,'male','78965412','sree@gmail.com','thrissur','kerala','thrissur','123');
