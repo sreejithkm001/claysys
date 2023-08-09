@@ -3,60 +3,144 @@
 
 <head>
     <title>Login Form</title>
-    <style>
-        body {
-            font-family: Arial;
-            background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
-        }
-
-        .login-form {
-            width: 350px;
-            height: 300px;
-            margin: 0 auto;
-            padding: 90px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #212226;
-            color: aliceblue;
-        }
-
-        .login-form .user,
-        .login-form .pswrd {
-            width: 90%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .login-form .submit {
-            width: 97%;
-            padding: 10px;
-            background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
 </head>
+
 <body>
-    <div>
-        <a href="home.html">
-            <button>HOME</button>
-        </a>
-    </div>
+    <header>
+
+        <img src="images/claysys-logo.png" alt="error">
+
+        <ul class="navbar">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </header>
     <div class="login-form">
-        <h2 style="text-align:center">Login Form</h2>
+        <h2>
+            <center>Login Form</center>
+        </h2>
         <form action="home.html">
             <label>Username:</label>
             <input class="user" type="email" required>
 
             <label>Password:</label>
-            <input class="pswrd" type="password" required>
-
+            <input class="pswrd" type="password" id="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+            <div id="password-message">
+                <h6 style="color:red;">Password must contain atleast one lowercase,uppercase,number,character</h6>
+            </div>
             <input class="submit" type="submit">
         </form>
+        <p>Not a member?&nbsp;&nbsp;
+            <a class="signuplink" href="registration.html"> Register now</a>
+        </p>
+
     </div>
+    <div style="margin-top: 30px;">
+        <footer class="text-center text-white" style="background-color: #ececec;">
+            <div class="container pt-4">
+                <!-- Section: Social media -->
+                <section class="mb-4">
+                    <!-- Facebook -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/ClaySys"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                    <!-- Twitter -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/claysys"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                    <!-- Google -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.claysys.com/"
+                        role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                    <!-- Instagram -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.instagram.com/claysystech" role="button" data-mdb-ripple-color="dark"><i
+                            class="fab fa-instagram"></i></a>
+
+                    <!-- Linkedin -->
+                    <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                        href="https://www.linkedin.com/company/claysys-technologies-pvt-ltd" role="button"
+                        data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+                </section>
+
+            </div>
+
+            <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright:Sreejith K M
+            </div>
+
+        </footer>
+    </div>
+    <script>
+        var passwordInput = document.getElementById("password");
+        var passwordMessageItems = document.getElementsByClassName("password-message-item");
+        var passwordMessage = document.getElementById("password-message");
+
+
+        passwordInput.onfocus = function () {
+            passwordMessage.style.display = "block";
+        }
+
+        // After clicking outside of password input hide the message
+        passwordInput.onblur = function () {
+            passwordMessage.style.display = "none";
+        }
+
+        passwordInput.onkeyup = function () {
+            // checking uppercase letters
+            let uppercaseRegex = /[A-Z]/g;
+            if (passwordInput.value.match(uppercaseRegex)) {
+                passwordMessageItems[1].classList.remove("invalid");
+                passwordMessageItems[1].classList.add("valid");
+            } else {
+                passwordMessageItems[1].classList.remove("valid");
+                passwordMessageItems[1].classList.add("invalid");
+            }
+
+            // checking lowercase letters
+            let lowercaseRegex = /[a-z]/g;
+            if (passwordInput.value.match(lowercaseRegex)) {
+                passwordMessageItems[0].classList.remove("invalid");
+                passwordMessageItems[0].classList.add("valid");
+            } else {
+                passwordMessageItems[0].classList.remove("valid");
+                passwordMessageItems[0].classList.add("invalid");
+            }
+
+            // checking the number
+            let numbersRegex = /[0-9]/g;
+            if (passwordInput.value.match(numbersRegex)) {
+                passwordMessageItems[2].classList.remove("invalid");
+                passwordMessageItems[2].classList.add("valid");
+            } else {
+                passwordMessageItems[2].classList.remove("valid");
+                passwordMessageItems[2].classList.add("invalid");
+            }
+
+            // Checking length of the password
+            if (passwordInput.value.length >= 8) {
+                passwordMessageItems[3].classList.remove("invalid");
+                passwordMessageItems[3].classList.add("valid");
+            } else {
+                passwordMessageItems[3].classList.remove("valid");
+                passwordMessageItems[3].classList.add("invalid");
+            }
+        }
+
+    </script>
+
 </body>
+
 </html>

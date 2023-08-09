@@ -5,12 +5,27 @@
     <title>Registration Form Validation</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
     <link rel="stylesheet" href="registration.css">
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+<!-- MDB -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
 </head>
 
 <body>
-    <a href="home.html">
-        <button>HOME</button>
-    </a>
+    <header>
+
+        <img src="images/claysys-logo.png" alt="error">
+
+        <ul class="navbar">
+            <li><a href="login.html">Login</a></li>
+            <li><a href="registration.html">Registration</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+    </header>
     <div class="wrapper">
         <div class="header">
             <h2>Registration Form</h2>
@@ -29,7 +44,7 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <input type="tel" id="mobile" placeholder="Enter mobile number">
+                <input  type="tel" id="mobile" placeholder="Enter mobile number">
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-times-circle"></i>
                 <small>Error message</small>
@@ -46,7 +61,6 @@
                 <i class="fas fa-times-circle"></i>
                 <small>Error message</small>
             </div>
-
             <div class="form-control">
                 <textarea required style="width:250px;" id="address" placeholder="Enter Address "></textarea>
                 <i class="fas fa-check-circle"></i>
@@ -54,7 +68,7 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <select style=" width: 200px;padding: 5px;" id="countrySelect" size="1"
+                <select style=" width: 250px;padding: 5px;" id="countrySelect" size="1"
                     onchange="makeSubmenu(this.value)" required>
                     <option value="" disabled selected>Choose State</option>
                     <option>Odisha</option>
@@ -67,7 +81,7 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <select id="citySelect" size="1" style=" width: 200px;padding: 5px; " required>
+                <select id="citySelect" size="1" style=" width: 250px;padding: 5px; " required>
                     <option>Choose City</option>
 
                 </select>
@@ -82,7 +96,7 @@
                 <small>Error message</small>
             </div>
             <div class="form-control">
-                <input type="password" placeholder="Confirm Password" id="confirmpswrd" />
+                <input type="password" placeholder="Confirm password" id="confirmpswrd" />
                 <i class="fas fa-check-circle"></i>
                 <i class="fas fa-times-circle"></i>
                 <small>Error message</small>
@@ -92,16 +106,17 @@
     </div>
     <script>
         var citiesByState = {
-            Odisha: ["Bhubaneswar", "Puri", "Cuttack"],
-            Maharashtra: ["Mumbai", "Pune", "Nagpur"],
-            Kerala: ["kochi", "Thrissur", "Palakkad"],
-            Tamilnadu: ["Coimbatore", "Chennai", "Madurai"]
+            Odisha: ["Choose City","Bhubaneswar", "Puri", "Cuttack"],
+            Maharashtra: ["Choose City","Mumbai", "Pune", "Nagpur"],
+            Kerala: ["Choose City","kochi", "Thrissur", "Palakkad"],
+            Tamilnadu: ["Choose City","Coimbatore", "Chennai", "Madurai"]
         }
         function makeSubmenu(value) {
             if (value.length == 0) document.getElementById("citySelect").innerHTML = "<option></option>";
             else {
                 var citiesOptions = "";
-                for (cityId in citiesByState[value]) {
+                for (cityId in citiesByState[value]) 
+                {
                     citiesOptions += "<option>" + citiesByState[value][cityId] + "</option>";
                 }
                 document.getElementById("citySelect").innerHTML = citiesOptions;
@@ -216,6 +231,43 @@
 
 
     </script>
+   <div style="margin-top:0px;">
+    <footer class="text-center text-white" style="background-color: #ececec;">
+        <div class="container pt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.facebook.com/ClaySys"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://twitter.com/claysys"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="https://www.claysys.com/"
+                    role="button" data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.instagram.com/claysystech" role="button" data-mdb-ripple-color="dark"><i
+                        class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-link btn-floating btn-lg text-dark m-1"
+                    href="https://www.linkedin.com/company/claysys-technologies-pvt-ltd" role="button"
+                    data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+            </section>
+
+        </div>
+
+        <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:Sreejith K M
+        </div>
+
+    </footer>
+</div>
+    
 </body>
 
 </html>

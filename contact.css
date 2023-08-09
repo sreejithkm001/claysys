@@ -6,7 +6,7 @@
     font-family: 'Montserrat', sans-serif;
   }
   body {
-    background-image: linear-gradient(270deg, #08AEEA 0%, #2AF598 100%);
+    background-image: linear-gradient(270deg, #ffffff 0%, #ffffff 100%);
   }
   .footer_get_touch_outer {
     margin-top: 10px;
@@ -81,3 +81,31 @@
     -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   
+/* header */
+header {
+  justify-content: space-between;
+}
+
+ul.navbar {
+
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow: hidden;
+  float: right;
+}
+
+ul.navbar li a {
+  display: flex;
+  color: white;
+  margin-right: 100;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover:not(.active) {
+  background-color: #f00a0a;
+}
