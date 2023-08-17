@@ -6,15 +6,13 @@ CREATE TABLE employees (
 );
 INSERT INTO employees (id, name, salary)
 VALUES
-    (1, 'John Doe', 60000),
-    (2, 'Jane Smith', 75000),
-    (3, 'Michael Johnson', 80000),
-    (4, 'Emily Brown', 72000),
-    (5, 'William Lee', 90000);
+    (1, 'hari ', 60000),
+    (2, ' ram', 75000),
+    (3, ' John', 80000),
+    (4, 'Emil', 72000),
+    (5, 'rahul', 90000);
 
-SELECT DISTINCT salary
-FROM employees
-ORDER BY salary DESC;
+
 
 SELECT DISTINCT TOP 1 salary
 FROM (

@@ -1,0 +1,12 @@
+D:\visual studio\loginform\loginform\bin\Debug\loginform.exe.config
+D:\visual studio\loginform\loginform\bin\Debug\loginform.exe
+D:\visual studio\loginform\loginform\bin\Debug\loginform.pdb
+D:\visual studio\loginform\loginform\obj\Debug\loginform.csproj.AssemblyReference.cache
+D:\visual studio\loginform\loginform\obj\Debug\loginform.csproj.SuggestedBindingRedirects.cache
+D:\visual studio\loginform\loginform\obj\Debug\loginform.Form1.resources
+D:\visual studio\loginform\loginform\obj\Debug\loginform.Menuform.resources
+D:\visual studio\loginform\loginform\obj\Debug\loginform.Properties.Resources.resources
+D:\visual studio\loginform\loginform\obj\Debug\loginform.csproj.GenerateResource.cache
+D:\visual studio\loginform\loginform\obj\Debug\loginform.csproj.CoreCompileInputs.cache
+D:\visual studio\loginform\loginform\obj\Debug\loginform.exe
+D:\visual studio\loginform\loginform\obj\Debug\loginform.pdb

@@ -1,0 +1,11 @@
+D:\visual studio\Registrationform\Registrationform\bin\Debug\Registrationform.exe.config
+D:\visual studio\Registrationform\Registrationform\bin\Debug\Registrationform.exe
+D:\visual studio\Registrationform\Registrationform\bin\Debug\Registrationform.pdb
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.csproj.AssemblyReference.cache
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.csproj.SuggestedBindingRedirects.cache
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.Form1.resources
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.Properties.Resources.resources
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.csproj.GenerateResource.cache
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.csproj.CoreCompileInputs.cache
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.exe
+D:\visual studio\Registrationform\Registrationform\obj\Debug\Registrationform.pdb
